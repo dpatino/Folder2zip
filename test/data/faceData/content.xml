@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <id>3ac3a5d0-1940-11e5-a8cd-0348ffc26391</id>
+  <dimensions>
+    <width>595.274</width>
+    <height>841.888</height>
+  </dimensions>
+  <resolutions>
+    <full>
+      <path>data/full.png</path>
+    </full>
+    <thumb>
+      <path>data/thumb.png</path>
+    </thumb>
+    <tiles>
+      <path>data/tiles</path>
+      <extension>jpg</extension>
+      <tileSide>256</tileSide>
+      <maximumZoomLevel>4</maximumZoomLevel>
+    </tiles>
+  </resolutions>
+  <children>
+    <mediaContainer/>
+  </children>
+  <content>
+    <textLayer>
+      <height>841.888</height>
+      <path>data/textLayer.html</path>
+    </textLayer>
+  </content>
+</root>
