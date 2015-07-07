@@ -1,6 +1,7 @@
 {
   "name": "folder2zip",
-  "version": "0.0.1",
+  "version": "0.0.3",
+
   "description": "zipping a folder with the linux command line : 'zip'",
   "main": "Folder2Zip.js",
   "directories": {
