@@ -67,6 +67,7 @@ Folder2Zip = (function () {
 	Folder2Zip.prototype.zip = function () {
 		debug('#zip');
 		this.startZip();
+		
 	};
 	Folder2Zip.prototype.processOptions = null;
 	Folder2Zip.prototype.filesLength = null;
