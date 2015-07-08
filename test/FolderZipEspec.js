@@ -18,9 +18,9 @@ describe("Folder2Zip", function () {
 		console.log('\t\t\tzipper.zipPromise = ' + (zipper.zipPromise !== undefined));
 	});
 	it('shuld zip folder', function (done) {
-		var zippper2 = new Folder2Zip('test', 'data', 'dataZip')
+		var zippper2 = new Folder2Zip('test/beevirtua', 'data', 'dataZip')
 		zippper2.on('zipEnd', function () {
-			fs.exists('test/dataZip.zip', function (exist) {
+			fs.exists('test/beevirtua/dataZip.zip', function (exist) {
 				expect(exist).to.be.true;
 				done()
 			})
@@ -30,25 +30,25 @@ describe("Folder2Zip", function () {
 		})
 	})
 	it('zip file size ok', function (done) {
-		var statsFromResultZipFile = fs.statSync("test/dataZip.zip")['size'];
-		var statsFromOrinigalZipFile = fs.statSync("test/originalData.zip")['size'];
+		var statsFromResultZipFile = fs.statSync("test/beevirtua/dataZip.zip")['size'];
+		var statsFromOrinigalZipFile = fs.statSync("test/beevirtua/originalData.zip")['size'];
 		expect(statsFromResultZipFile).to.be.equal(statsFromOrinigalZipFile);
 		done()
 		console.log('\t\t\tstatsFromResultZipFile.size = ' + statsFromOrinigalZipFile);
 		console.log('\t\t\tstatsFromOrinigalZipFile.size = ' + statsFromOrinigalZipFile);
 	})
 	it('zip file Promise', function (done) {
-		var zippper3 = new Folder2Zip('test', 'data', 'dataZipPromise')
+		var zippper3 = new Folder2Zip('test/beevirtua', 'data', 'dataZipPromise')
 		zippper3.zipPromise().then(function () {
-			fs.exists('test/dataZipPromise.zip', function (exist) {
+			fs.exists('test/beevirtua/dataZipPromise.zip', function (exist) {
 				expect(exist).to.be.true;
 				done()
 			})
 		})
 	})
 	it('zip promise file size ok', function (done) {
-		var statsFromResultZipFile = fs.statSync("test/dataZip.zip")['size'];
-		var statsFromOrinigalZipFile = fs.statSync("test/dataZipPromise.zip")['size'];
+		var statsFromResultZipFile = fs.statSync("test/beevirtua/dataZip.zip")['size'];
+		var statsFromOrinigalZipFile = fs.statSync("test/beevirtua/dataZipPromise.zip")['size'];
 		expect(statsFromResultZipFile).to.be.equal(statsFromOrinigalZipFile);
 		done()
 		console.log('\t\t\tstatsFromResultZipFile.size = ' + statsFromOrinigalZipFile);
