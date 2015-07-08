@@ -3,7 +3,7 @@ zipping a folder with the linux command line : 'zip'
 
 **Simple Zip**
 
-    var Folder2Zip = require('./Folder2Zip')
+    var Folder2Zip = require('../Folder2Zip')
     
     
     var zipper = new Folder2Zip('test', 'data', 'dataZip')
@@ -27,7 +27,10 @@ zipping a folder with the linux command line : 'zip'
     
 	zipperPromise.zipPromise().then(function () {
     	fs.exists('test/dataZipPromise.zip', function (exist) {
-    	
+    		expect(exist).to.be.true;
     	    	})
     		})
     
+**WINDOWS USERS**
+
+add folder bin to your path
